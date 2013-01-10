@@ -1,9 +1,9 @@
 #!/usr/local/bin/php -q
 <?php
 
-require_once'/home/rone/sc/sc/log.class.php';
-require_once '/home/rone/sc/sc/init.php';
-require_once '/home/rone/sc/sc/libs/qdmail_receiver.php';
+require_once dirname(__FILE__).'/log.class.php';
+require_once dirname(__FILE__).'/init.php';
+require_once dirname(__FILE__).'/libs/qdmail_receiver.php';
 
 $log = new BxLog(LOG_FILE, LOG_ROTATE_DAYS, LOG_KEEPS);
 //$log->info("----- mail start -----");
