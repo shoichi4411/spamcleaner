@@ -19,15 +19,20 @@
 
 ## 使用方法
 ・ダウンロードしたファイルをFTPなどでメールを使用しているサーバーにアップする。  
-・その際、ブラウザからアクセスできない場所にアップするのをオススメします。  
+* その際、ブラウザからアクセスできない場所にアップするのをオススメします。 *  
+・init.phpを編集する  
+
+    define('GMAIL_USERID'	, 'ここにGmailアドレス');
+    define('GMAIL_PASSWORD'	, 'ここにGmailパスワード');
+
 ・次にメールボックス以下に.mailfilterファイルを作成（中身は以下を参照）  
 
-cc "hoge@gmail.com"  
-xfilter "/usr/local/bin/php -q /home/hoge/sc/clean.php"  
-if (/^X-SpamCleaner-Status: Bad/:h)  
-{  
-	to /dev/null  
-}  
+    cc "hoge@gmail.com"
+    xfilter "/usr/local/bin/php -q /home/hoge/sc/clean.php"
+    if (/^X-SpamCleaner-Status: Bad/:h)
+    {
+    	to /dev/null
+    }
 
 ※1行目のhoge@gmail.comの部分は、ご自分のGmailアドレスを入力してください。  
 ※2行目の/usr/local/bin/phpの部分はレンタルサーバーによって変わります。  
