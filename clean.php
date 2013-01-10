@@ -33,8 +33,6 @@ foreach($receiver->getUidAll() as $uid) {
 	$receiver->getMail($uid);
 	$messageId = $receiver->header('message-id');
 	if ($originMessageId == $messageId) {
-		$logmsg = "Found mail : ".$messageId;
-		$log->debug($logmsg);
 		$foundFlg = true;
 		$ret = $receiver->deleteUid($uid);
 		break;
@@ -46,8 +44,8 @@ unset($receiver);
 
 $header = "X-SpamCleaner-Version: SpamCleaner 0.0.1 (2013-01-09)\r\n";
 if (!$foundFlg) {
-	$logmsg = "Spam mail : {$subject} [{$originMessageId}]";
-	$log->info($logmsg);
+//	$logmsg = "Spam mail : {$subject} [{$originMessageId}]";
+//	$log->info($logmsg);
 	$header .= "X-SpamCleaner-Status: Bad";
 }else{
 	$header .= "X-SpamCleaner-Status: Clean";
