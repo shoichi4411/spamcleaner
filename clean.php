@@ -1,6 +1,23 @@
 #!/usr/local/bin/php -q
 <?php
 
+/*
+ * Spam Cleaner
+ *
+ * PHP versions 4 and 5 (PHP4.3 upper)
+ *
+ * Copyright 2013, Shoichi Takahashi@R-ONE Computer
+ * blog    :  http://f-dev.jp/
+ * Licensed under The MIT License License
+ *
+ * @copyright		Shoichi Takahashi@R-ONE Computer
+ * @link			https://github.com/shoichi4411/spamcleaner
+ * @version			0.1.0
+ * @lastmodified	2013-01-15
+ * @license			The MIT License http://www.opensource.org/licenses/mit-license.php
+ *
+ */
+
 require_once dirname(__FILE__).'/log.class.php';
 require_once dirname(__FILE__).'/init.php';
 require_once dirname(__FILE__).'/libs/qdmail_receiver.php';
