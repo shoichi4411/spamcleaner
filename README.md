@@ -43,3 +43,7 @@
 ・これで完了です。あとはメール受信するのを待つだけです。
 
 ※削除したメールが見たい場合はGmailのごみ箱を見れば残ってますので、いざという時も安心です♪
+
+## ライセンス
+MITライセンスです。  
+The MIT License http://www.opensource.org/licenses/mit-license.php
